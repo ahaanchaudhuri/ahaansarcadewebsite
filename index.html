@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahaan's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="arcade-header">
+        <div class="navbar-container">
+            <a href="#home">
+                <img src="assets/sprite.png" alt="8-Bit Logo" class="arcade-logo">
+            </a>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="arcade-navbar">
+                <ul>
+                    <li><a href="#about" class="arcade-link">About Me</a></li>
+                    <li><a href="#projects" class="arcade-link">Projects</a></li>
+                    <li><a href="#resume" class="arcade-link">Resume</a></li>
+                    <li><a href="#contact" class="arcade-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="arcade-content">
+        <section id="about" class="arcade-section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-photo">
+                    <img src="assets/headshot.png" alt="Your Sprite" class="about-sprite">
+                </div>
+                <div class="about-text">
+                    <p class="intro-text">Hi! I’m Ahaan, a Software Engineer.</p>
+                    <p class="bio-text">
+                        I'm a Senior at Northeastern majoring in Computer Science with concentration in AI and a minor in Sports Media and Communication. At heart, I'm a creator. My passion for Software Development is inherently one for creativity in all forms. Outside of the classroom, I write for Tastemakers Magazine and host DIAMONDS on WRBB 104.9 every Wednesday at Midnight!
+                    </p>
+                    <p class="bio-text">
+                        I would love to work in an environment where I'm able to contribute to a meaningful product while also being able to apply my creativity.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="arcade-section">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-title="Jeff Green Number" data-description="A Graph based search game which connects any two NBA players in history based on their degrees of separation.">
+                    <div class="project-image">
+                        <!-- Placeholder for project image -->
+                        <img src="assets/jeffgreennumber.png" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Jeff Green Number</h3>
+                        <p class="project-description">Measures the degrees of separation between any two basketball players!</p>
+                    </div>
+                </div>
+                <div class="project-card" data-title="Poker Adventure" data-description="An AI Poker Engine which is currently being harnessed to make a full-scale story-based poker game.">
+                    <div class="project-image">
+                        <img src="assets/pokergame.png" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Poker Adventure</h3>
+                        <p class="project-description">A Poker Odds Calculator plus an AI Engine!</p>
+                    </div>
+                </div>
+                <div class="project-card" data-title="Connect-N" data-description="An abstracted version of the popular board game Connect-4 where users can play in this text-based version of the household classic!">
+                    <div class="project-image">
+                        <img src="assets/connectn.png" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Connect-N</h3>
+                        <p class="project-description">An abstracted version of Connect-4!</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/youqueue.png" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">YouQueue</h3>
+                        <p class="project-description">Shuffle from multiple playlists!</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/grimp.png" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">GrIMP</h3>
+                        <p class="project-description">Lightweight and simplified Image processing!</p>
+                    </div>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
+        </section>
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 class="modal-title">Project 1</h3>
+                <p class="modal-description">Detailed information about Project 1 goes here...</p>
+                <!-- Add images, links, or additional details -->
+            </div>
+        </div>
+        
+        
+        <section id="resume" class="arcade-section">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-content">
+                <!-- Education Section -->
+                <div class="resume-block">
+                    <h3 class="resume-subtitle">Education</h3>
+                    <ul class="resume-list">
+                        <li>
+                            <span class="resume-item-title">Bachelor's of Science in Computer Science</span> - Northeastern University (2021-2025)
+                        </li>
+                        <li>
+                            <span class="resume-item-title">High School Diploma</span> - Singapore American School (2017-2021)
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Experience Section -->
+                <div class="resume-block">
+                    <h3 class="resume-subtitle">Experience</h3>
+                    <ul class="resume-list">
+                        <li>
+                            <span class="resume-item-title">Software Engineer Intern</span> - Kargo (June 2024 - August 2024)
+                            <p class="resume-item-description">•	Redesigned Ad-Tag Website implementing more intuitive UI/UX design using advanced CSS styling and adding frontend functionality to insert code snippets which save new creatives directly to the backend server for testing
+                               
+                               <br>•	Spearheaded implementation of new Ad Unit specialized for mobile devices, leveraging several API calls to maintain responsive and lightweight Creative with intuitive functionality integrated with Celtra Objects
+                                </p>
+                        </li>
+                        <li>
+                            <span class="resume-item-title">Teaching Assistant</span> - Northeastern University (August 2023 - May 2024)
+                            <p class="resume-item-description">• Leading a weekly class of 30+ students on the topic of entrance into the professional world, providing instruction on resume creation as well as interview preparation and essential tools for the recruiting process <br>
+                                • Guiding students through personalized assistance during biweekly office hours, completing comprehensive resume restructuring and organizing mock interviews pertaining to their individualized career aspirations <br>
+                                
+                                • Assisted 50+ Second Year students in interviewing for and obtaining their first co-op experience</p>
+                        </li>
+                        <li>
+                            <span class="resume-item-title">
+                                Junior Programmer</span> - The Kraft Group & Affiliates (January 2023 - May 2023)
+                            <p class="resume-item-description">• Formulated 20+ detailed PowerBI reports, including a Sales Forecast for Gillette Stadium, using predictive modeling and concatenation of information using complex statements written in SQL, DAX, and PowerQuery
+                                <br>• Created and distributed several C# and .NET applications designed to restructure the company’s intranet and update the company’s SQL Server database by scraping information from their directory website</p>
+                        </li>
+                        <li>
+                            <span class="resume-item-title">Software Engineer Intern</span> - Wunderman Thompson (June 2022 - July 2022)
+                            <p class="resume-item-description">• Crafted Tableau dashboards and connected them to external endpoints with Google Drive and OneDrive REST APIs, operating in Python and JavaScript, gaining valuable insight into internal operations and inefficiencies
+                                <br>• Developed essential widely used libraries designed to automatically zip and archive old log files and store them in separate Google Drive folders, streamlining the team’s internal log file collection and revision processing</p>
+                        </li>
+                    </ul>
+                </div>
+        
+                <!-- Skills Section -->
+                <div class="resume-block">
+                    <h3 class="resume-subtitle">Skills</h3>
+                    <ul class="resume-list resume-skills">
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>HTML & CSS</li>
+                        <li>C#</li>
+                        <li>Audio & Video Editing</li>
+                        <!-- Add more skills as needed -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="arcade-section">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-info">
+                <p class="contact-item">
+                    <span class="contact-label">Email:</span>
+                    <a href="mailto:ahaanchaudhuri@gmail.com" class="contact-link">ahaanchaudhuri@gmail.com</a>
+                </p>
+                <p class="contact-item">
+                    <span class="contact-label">LinkedIn:</span>
+                    <a href="https://www.linkedin.com/in/ahaan-chaudhuri-34a08422a/" class="contact-link" target="_blank">My Profile</a>
+                </p>
+            </div>
+        </section>
+        
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

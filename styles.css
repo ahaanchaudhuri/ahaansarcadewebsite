@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background: #000;
+    color: #00FF41;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+.arcade-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #1E1E1E;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    text-align: center;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.arcade-logo {
+    width: 50px;
+    margin-right: 20px;
+    image-rendering: pixelated;
+    transition: transform 0.3s ease;
+}
+
+.arcade-logo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.arcade-navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.arcade-link {
+    text-decoration: none;
+    color: #00FF41;
+    background: #1E1E1E;
+    padding: 10px 20px;
+    border: 2px solid #00FF41;
+    box-shadow: 3px 3px 0px #FF1493;
+    transition: all 0.3s ease;
+}
+
+.arcade-link:hover {
+    background: #FF1493;
+    color: #1E1E1E;
+    box-shadow: 3px 3px 0px #FFD700;
+    cursor: pointer;
+}
+
+.arcade-content {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.arcade-section {
+    padding: 20px;
+    border: 2px solid #00FF41;
+    background: #1E1E1E;
+    box-shadow: 4px 4px #FF1493;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #FFD700;
+    color: #00FF41;
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.about-photo {
+    flex-shrink: 0;
+}
+
+.about-sprite {
+    width: 150px;
+    image-rendering: pixelated;
+    border: 2px solid #FF1493;
+    padding: 5px;
+    box-shadow: 3px 3px #FFD700;
+    background: #000;
+}
+
+.about-text {
+    max-width: 70%;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #00FF41;
+    background: #000;
+    padding: 20px;
+    border: 2px solid #00FF41;
+    box-shadow: 3px 3px #FF1493;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    animation: typewriter 2s steps(40) 1 normal both;
+    border-right: 2px solid #FFD700;
+    white-space: nowrap;
+    overflow: hidden;
+    width: fit-content;
+    max-width: 100%;
+}
+
+.bio-text {
+    margin-top: 10px;
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+
+.arcade-section {
+    display: none;
+}
+
+.arcade-section.active {
+    display: block;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background: #1E1E1E;
+    border: 2px solid #00FF41;
+    padding: 15px;
+    box-shadow: 4px 4px #FF1493;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px #FFD700;
+}
+
+.project-image img {
+    width: 100%;
+    image-rendering: pixelated;
+    border: 2px solid #FF1493;
+    margin-bottom: 10px;
+}
+
+.project-info {
+    text-align: center;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #00FF41;
+}
+
+.project-description {
+    font-size: 0.9rem;
+    color: #FFD700;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Added padding to ensure content isn't flush with the screen edges */
+}
+
+.modal-content {
+    background: #1E1E1E;
+    padding: 15px;
+    border: 2px solid #00FF41;
+    box-shadow: 4px 4px #FF1493;
+    width: 90%; /* Set width as a percentage of the viewport */
+    max-width: 500px; /* Limit the maximum width on larger screens */
+    max-height: 80vh; /* Ensure the modal doesn’t take up more than 80% of the viewport height */
+    overflow-y: auto; /* Allow scrolling if the content overflows */
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #FFD700;
+    cursor: pointer;
+}
+
+/* Additional responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%; /* Slightly reduce width for very small screens */
+        padding: 10px; /* Reduce padding inside the modal */
+        max-width: none; /* Remove max-width to allow more flexibility */
+        overflow-y: scroll;
+    }
+
+    .modal-title {
+        font-size: 1.2rem; /* Reduce font size for better fit */
+    }
+
+    .modal-description {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Base styling remains the same */
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column; /* Stack the sprite and navbar */
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .arcade-navbar ul {
+        justify-content: flex-start;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack the sprite and text vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-photo {
+        margin-bottom: 15px; /* Add space below the sprite */
+    }
+
+    .about-text {
+        max-width: 100%; /* Allow the text container to take up full width */
+        padding: 15px;
+        font-size: 0.9rem; /* Slightly reduce font size for better fit */
+    }
+
+    .intro-text {
+        font-size: 1rem; /* Reduce intro font size */
+        animation: typewriter 2s steps(30) 1 normal both;
+    }
+
+    .section-title {
+        font-size: 1.5rem; /* Scale down the section title */
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Make each project card take full width */
+    }
+
+    .project-card {
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 90%; /* Make the modal content narrower */
+    }
+}
+
+
+/* Basic Hamburger Menu Styling */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    padding: 10px;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: #00FF41;
+    display: block;
+}
+
+/* General Responsive Fix */
+* {
+    box-sizing: border-box; /* Ensure padding and borders are included in element width calculations */
+}
+
+/* Adjustments for mobile view */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        width: 100%; /* Ensure the navbar container doesn’t exceed screen width */
+    }
+
+    .hamburger-menu {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+
+
+    .arcade-navbar {
+        width: 100%; /* Ensure the navbar fits within the screen */
+        text-align: center;
+    }
+
+    .arcade-navbar ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .arcade-link {
+        padding: 10px;
+        font-size: 1rem;
+        width: 100%; /* Make sure each link fits within the screen width */
+        box-sizing: border-box;
+    }
+
+    /* Ensure other content sections fit within the screen */
+    .arcade-section {
+        padding: 10px;
+        margin: 0 auto;
+        max-width: 100%; /* Limit content to screen width */
+    }
+
+    .about-content, .resume-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-photo {
+        width: 100%; /* Constrain the image container to fit the screen */
+        text-align: center;
+    }
+
+    .about-text {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Resume Section */
+.resume-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: #1E1E1E;
+    border: 2px solid #00FF41;
+    box-shadow: 4px 4px #FF1493;
+}
+
+.resume-block {
+    padding: 15px;
+    border: 2px solid #00FF41;
+    box-shadow: 3px 3px #FF1493;
+    background: #000;
+}
+
+.resume-subtitle {
+    font-size: 1.5rem;
+    color: #00FF41;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #FFD700;
+}
+
+.resume-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resume-item-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00FF41;
+}
+
+.resume-item-description {
+    font-size: 0.9rem;
+    color: #FFD700;
+    margin-top: 5px;
+}
+
+.resume-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.resume-skills li {
+    background: #1E1E1E;
+    padding: 5px 10px;
+    border: 2px solid #00FF41;
+    box-shadow: 2px 2px #FF1493;
+    font-size: 0.9rem;
+    color: #FFD700;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #FFD700;
+    color: #00FF41;
+}
+
+.contact-item {
+    color: #FFD700;
+}
